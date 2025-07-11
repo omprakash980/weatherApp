@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sunny: #FFD700;
+  --color-rainy: #64808E;
+  --color-sunset :#F76218
+}
