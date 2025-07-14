@@ -14,7 +14,7 @@ function App() {
   const [giphy,setGif] = useState("");
 
 
-  const apiKey = "9b8eb7f80d378ecf6583b53977b6347b";
+  
 
   const weatherReport = async ()=>{
     setError(null);
