@@ -53,6 +53,7 @@ function App() {
       
     } else if(temp <= 30 && temp>=25){
       setTask("bg-sunset");
+      console.log("Jndkdm");
       
     }else{
       setTask("bg-rainy");
