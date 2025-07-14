@@ -49,7 +49,7 @@ function App() {
   useEffect(()=>{
     if(temp >= 31){
       setTask("bg-sunny");
-      setGif("/assets/sunset.gif")
+      console.log("hot");
       
     } else if(temp <= 30 && temp>=25){
       setTask("bg-sunset");
@@ -60,40 +60,40 @@ function App() {
     }
   },[temp])
 
-  useEffect(()=>{
-    const isHour = currentTime.split(":");
-    const isHourTime = parseInt(isHour[0]);
-    if (currentTime.includes("pm") &&
-     (isHourTime >=4 && isHourTime <= 8)){
-      setGif("/assets/sunset.gif");
-    }
-    else if (currentTime.includes("am") &&
-     (isHourTime>=4 && isHourTime <= 11)){
-      setGif("/assets/sunrise.gif");
-    } else if(currentTime.includes("pm")){
-      setGif("/assets/68F.gif");
-    } 
-    else {
-      setGif("/assets/moon.gif");
-    }
+  // useEffect(()=>{
+  //   const isHour = currentTime.split(":");
+  //   const isHourTime = parseInt(isHour[0]);
+  //   if (currentTime.includes("pm") &&
+  //    (isHourTime >=4 && isHourTime <= 8)){
+  //     setGif("/assets/sunset.gif");
+  //   }
+  //   else if (currentTime.includes("am") &&
+  //    (isHourTime>=4 && isHourTime <= 11)){
+  //     setGif("/assets/sunrise.gif");
+  //   } else if(currentTime.includes("pm")){
+  //     setGif("/assets/68F.gif");
+  //   } 
+  //   else {
+  //     setGif("/assets/moon.gif");
+  //   }
 
-  },[currentTime]);
+  // },[currentTime]);
 
-//   useEffect(() => {
-//   const hour = parseInt(currentTime.split(":")[0]);
-//   const isPM = currentTime.toLowerCase().includes("pm");
-//   const isAM = currentTime.toLowerCase().includes("am");
+  useEffect(() => {
+  const hour = parseInt(currentTime.split(":")[0]);
+  const isPM = currentTime.toLowerCase().includes("pm");
+  const isAM = currentTime.toLowerCase().includes("am");
 
-//   if (isAM && hour >= 4 && hour <= 11) {
-//     setGif("/assets/sunrise.gif"); // Morning
-//   } else if (isPM && hour >= 4 && hour <= 8) {
-//     setGif("/assets/sunset.gif"); // Evening
-//   } else if (isPM && (hour >= 12 && hour < 16)) {
-//     setGif("/assets/68F.gif"); // Afternoon
-//   } else {
-//     setGif("/assets/moon.gif"); // Night
-//   }
-// }, [currentTime]);
+  if (isAM && hour >= 4 && hour <= 11) {
+    setGif("/assets/sunrise.gif"); // Morning
+  } else if (isPM && hour >= 4 && hour <= 8) {
+    setGif("/assets/sunset.gif"); // Evening
+  } else if (isPM && (hour >= 12 && hour < 16)) {
+    setGif("/assets/68F.gif"); // Afternoon
+  } else {
+    setGif("/assets/moon.gif"); // Night
+  }
+}, [currentTime]);
 
 
 
@@ -126,7 +126,7 @@ function App() {
 
        {error && <h3 className="text-red-500">{error}</h3>} 
        { temp>0 &&
-        <h2 className =" text-blue-500 bg-yellow-200 rounded-xl font-mono p-3">{`Temperture of the ${response.name}  in celsisus is  ${temp}° in Current Time ${currentTime}` }</h2>
+        <h2 className =" text-blue-500 bg-yellow-200 rounded-xl font-mono p-3">{`Temperture of the ${response.name}  in celsisus is  ${temp}° in Current Time ${currentTime} ` }</h2>
        }
       
     </div>
