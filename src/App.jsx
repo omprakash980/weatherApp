@@ -17,7 +17,8 @@ function App() {
   const [giphy,setGif] = useState("");
   // const [warning,setwarning] = useState("");
   // const [eventtype,setEventtype] = useState("");
-  console.log("Gettingndata in the way of rebase");
+  //Added a new Line
+console.log("git fetch + git origin");
 
 
 
