@@ -15,13 +15,9 @@ function App() {
   const [response,setResponse ] = useState({});
   const [currentTime,setCurrentTime] = useState("");
   const [giphy,setGif] = useState("");
-  const [warning,setwarning] = useState("");
-  const [eventtype,setEventtype] = useState("");
-  console.log("Weather App got Started");
   // const [warning,setwarning] = useState("");
   // const [eventtype,setEventtype] = useState("");
-  console.log("I , Im On The WeatherApp");
-  console.log("ON THE PRINT");
+  
 
 
 
