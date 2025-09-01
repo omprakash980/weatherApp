@@ -17,6 +17,7 @@ function App() {
   const [giphy,setGif] = useState("");
   const [warning,setwarning] = useState("");
   const [eventtype,setEventtype] = useState("");
+  console.log("Weather App got Started");
 
 
   const apiKey = "9b8eb7f80d378ecf6583b53977b6347b";
