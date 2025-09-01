@@ -17,7 +17,7 @@ function App() {
   const [giphy,setGif] = useState("");
   const [warning,setwarning] = useState("");
   const [eventtype,setEventtype] = useState("");
-  // console.log("Weather App got Started");
+  console.log("Weather App got Started");
   // const [warning,setwarning] = useState("");
   // const [eventtype,setEventtype] = useState("");
 
