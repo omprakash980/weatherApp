@@ -19,7 +19,7 @@ function App() {
   // const [eventtype,setEventtype] = useState("");
 
 
-  const apiKey = "9b8eb7f80d378ecf6583b53977b6347b";
+  
   <InactiveTimer />
 
   // useEffect(()=>{
